@@ -9,3 +9,16 @@
 - Decide to pick RDS since SQL should be future proof for the system.
 
 # Start working on the terraform module for RDS
+
+Create tf-simple-rds module
+Some RDS related resources created manually / preconfigured such as:
+- db-subnet-group
+- RDSMonitoring Role
+- Default VPC
+
+
+Successfully provisioned the RDS using the terraform module.
+Just realized SSH is blocked from my home. I'll figure it later how to initialize the database schema.
+
+
+# Start working on the Lambda script to fetch the data from S3 and store it to RDS
