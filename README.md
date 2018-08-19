@@ -7,4 +7,4 @@ A serverless crypto notification system. This system breaks down into 3 parts:
 
 All modules is designed to run on AWS. The architecture can be shown below.
 
-<img alt="architecture" src="https://cloudcraft.co/view/0aa2983d-0d3f-4229-aa00-5d8d358a166c?key=aGaCpwiPJ5TWpVA6edQgAQ" width="600px">
+<img alt="architecture" src="https://s15.postimg.cc/ubnz3ipd7/crypto-notifier-architecture.png" width="600px">
