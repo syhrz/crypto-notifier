@@ -18,19 +18,19 @@ zone_id = "Z20XKIJ4Y1OD4C"
 
 domain_name = "db.stg.srzx.xyz"
 
-instance_class = "db.t2.medium"
+instance_class = "db.t2.micro"
 
 engine_version = "9.6.6"
 
 database_port = "5432"
 
-multi_az = "true"
+multi_az = "false"
 
 allocated_storage = "20"
 
 backup_retention_period = "7"
 
-storage_encrypted = "true"
+storage_encrypted = "false"
 
 username = "postgres"
 
