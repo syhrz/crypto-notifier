@@ -1,11 +1,11 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"github.com/aws/aws-lambda-go/lambda"
 	"net/http"
-	"bytes"
 )
 
 func readJSONFromUrl(url string) ([]Currency, error) {
@@ -26,7 +26,7 @@ func readJSONFromUrl(url string) ([]Currency, error) {
 	return currencies, nil
 }
 
-type MyEvent struct {
+type Event struct {
 	Url string `json:"Url"`
 }
 
@@ -34,12 +34,8 @@ type DataSource struct {
 	content string
 }
 
-type MyResponse struct {
+type Response struct {
 	Output string `json:"Output:"`
-}
-
-type Currencies struct {
-	Currencies []Currency
 }
 
 type Currency struct {
@@ -53,14 +49,13 @@ type Currency struct {
 	WeightedAverage float64 `json:"weightedAverage"`
 }
 
-func HandleLambdaEvent(event MyEvent) (MyResponse, error) {
-
+func HandleLambdaEvent(event Event) (Response, error) {
 	datasource, err := readJSONFromUrl(event.Url)
 	if err != nil {
 		panic(err)
 	}
 
-	return MyResponse{Output: fmt.Sprintf("%s", datasource)}, nil
+	return Response{Output: fmt.Sprintf("%s", datasource)}, nil
 }
 
 func main() {
