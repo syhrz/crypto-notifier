@@ -16,10 +16,8 @@ Some RDS related resources created manually / preconfigured such as:
 - RDSMonitoring Role
 - Default VPC
 
-
 Successfully provisioned the RDS using the terraform module.
 Just realized SSH is blocked from my home. I'll figure it later how to initialize the database schema.
-
 
 # Start working on the Lambda script to fetch the data from S3 and store it to RDS
 I naively pick the language that I'm not familiar: Go.
