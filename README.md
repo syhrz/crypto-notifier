@@ -17,6 +17,8 @@ Lambda offer flexibility for scaling the number of data sources. We can create m
 
 In the initial design We'll only use one RDS. We can improve the design of the database to be more fault tolerant by implementing Multi-AZ and create the read replica for analysis module.
 
+[![ingestion-module.png](https://s33.postimg.cc/brhu75h33/ingestion-module.png)](https://postimg.cc/image/kmioho5vf/)
+
 ## Analysis
 The analysis module is responsible to do quick analysis from the data that already gathered. For the initial design analysis module will run periodically using Lambda with cloudwatch. When things getting heavy We can improve the design by using EC2 with autoscaling group to run heavy analysis or ECS. For bigger scale analysis I'd stick with using EC2 with autoscaling since using ECS (container) won't benefit much and AWS services / technology stack is not (yet) docker friendly.
 
