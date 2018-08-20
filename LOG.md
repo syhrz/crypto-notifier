@@ -22,4 +22,8 @@ Just realized SSH is blocked from my home. I'll figure it later how to initializ
 # Start working on the Lambda script to fetch the data from S3 and store it to RDS
 I naively pick the language that I'm not familiar: Go.
 Finally made the lambda get the data from S3, parse it and store in variable.
-Still need to add the write function to database (RDS postgres)
+Still missing the write function to database (RDS postgres)
+
+# Back to the documentation
+Update the README.md to give more general picture of the architecture
+I think I've passed the 12 hour mark. So finger cross and let's see.
