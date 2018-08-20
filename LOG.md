@@ -27,3 +27,11 @@ Still missing the write function to database (RDS postgres)
 # Back to the documentation
 Update the README.md to give more general picture of the architecture
 I think I've passed the 12 hour mark. So finger cross and let's see.
+
+# Conclusion
+I managed to create:
+- The README.md that consist of general view of the architecture of the system.
+- Implementation:
+  - Managed to create RDS module and provision the RDS.
+  - Lambda script partially done, missed the part to write it to RDS.
+  - I plan to use AWS KMS to store the RDS password. (Not yet impelmented)
